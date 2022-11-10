@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Paleta de cores:
-VD: #049a09d
+VD: #49a09d
 Lilás: #5f2c82 */
 
 * {
@@ -52,4 +52,66 @@ section#login > div#imagem {
 section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: .8em;
+}
+
+form > div.campo {
+    background-color: #5f2c82;
+    display: block; /* posiciona este objeto ocupando uma linha (não é necessário pois a div é block */
+    width: 100%; /* a largura ocupará toda a caixa (não é necessário pois a div já ocupa) */
+    height: 40px; /* padronização */
+    border-radius: 5px;
+    margin: 5px 0px; /* shorthand, está afastando 5px em cima e em baixo */
+}
+
+form > div.campo > label { /* ou form > div > label porém é mais genérico */
+    display: none; /* removendo os nome "Login" e "Senha" dos campos */
+}
+
+form > input[type=submit] {
+    display: block; /* posiciona o botão "Entrar" ocupando uma linha */
+    font-size: 1em; /* padroniza o tamanho da fonte */
+    width: 100%;    /* a largura do botão ocupará toda a caixa da section */
+    height: 40px;
+    background-color: #49a09d; /* fundo VD */
+    color: white; /* cor das letras */
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; /* imagem de uma mão ao passar sobre o cursor */
+}
+
+form > input[type=submit]:hover {
+    background-color: #295958; /* VD escuro qdo o mouse tiver em cima */
+}
+
+form > a.botao {
+    background-color: white;
+    border: 1px solid #49a09d;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    padding-top: 7px;
+    margin-top: 5px;
+    height: 40px;
+    color: #295958; /* cor da letra VD escuro */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: #6cd3cf; /* Vd claro p/ gerar contraste com o botão "Entrar" */
+}
+
+form > a.botao > span {
+    font-size: .8em;
+    padding-left: 3px; /* afastando o ícone */
 }
