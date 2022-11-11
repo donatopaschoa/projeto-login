@@ -27,18 +27,16 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; 
     /* tudo q tiver fora da borda da <section> não será mostrado - necessário na imag. d fundo - metal.jpeg  */
-
     background-color: white;
     width: 250px;
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.502);
-
     transition: width .3s, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -65,15 +63,40 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: solid 2px #5f2c82; /* necessário p/ gerar efeito de contorno externo nas caixas d input login e senha */
     display: block; /* posiciona este objeto ocupando uma linha (não é necessário pois a div é block */
     width: 100%; /* a largura ocupará toda a caixa (não é necessário pois a div já ocupa) */
     height: 40px; /* padronização */
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px; /* shorthand, está afastando 5px em cima e em baixo */
 }
 
 form > div.campo > label { /* ou form > div > label porém é mais genérico */
     display: none; /* removendo os nome "Login" e "Senha" dos campos */
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 45px); 
+    /* ajuste automático subtraindo a largura dos ícones do google */
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px); 
+    /* movimentação vertical, sentido p/ para cima, p/ q os 2 inputs fiquem simetricamente dentro das 2 divs*/
+}
+
+div.campo > input:focus-within { /* Alteração da cor de fundo ao digitar */
+    background-color: white;
 }
 
 form > input[type=submit] {
@@ -93,17 +116,18 @@ form > input[type=submit]:hover {
 }
 
 form > a.botao {
-    background-color: white;
-    border: 1px solid #49a09d;
     display: block;
     text-align: center;
     font-size: 1em;
-    width: 100%;
-    padding-top: 7px;
-    margin-top: 5px;
+   /* width: calc(100% - 2px); */
+   width: 100%;
     height: 40px;
+    padding-top: 2px;
+    margin-top: 5px;
+    background-color: white;
     color: #295958; /* cor da letra VD escuro */
-    border-radius: 5px;
+    border: 1px solid #49a09d;
+    border-radius: 7px;
     text-decoration: none;
 }
 
@@ -112,6 +136,7 @@ form > a.botao:hover {
 }
 
 form > a.botao > span {
-    font-size: .8em;
-    padding-left: 3px; /* afastando o ícone */
+
+    padding-left: 5px; 
 }
+

@@ -13,6 +13,7 @@ Paleta de cores:
 VD: #49a09d
 Lilás: #5f2c82 */
 
+/* Tablet -------------------- */
 @media screen and (min-width: 768px) and (max-width:992px) {
 
     body {
@@ -21,6 +22,7 @@ Lilás: #5f2c82 */
 
     section#login {
         width: 80vw;
+        height: 280px;
     }
 
     section#login > div#imagem {
@@ -35,6 +37,7 @@ Lilás: #5f2c82 */
     }
 }
 
+/* Desktop, TV -------------------- */
 @media screen and (min-width: 992px) {
 
     body {
@@ -43,6 +46,7 @@ Lilás: #5f2c82 */
 
     section#login {
         width: 950px; /* a largura anterior (cel e tablet) vai expandindo até 992px e depois trava em 950px  */
+        height: 350px;
     }
 
     section#login > div#imagem {
@@ -61,7 +65,8 @@ Lilás: #5f2c82 */
     }
     
     div#formulario > p {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin: 20px 0px;
     }
 
 }
