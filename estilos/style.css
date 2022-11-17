@@ -95,7 +95,7 @@ div.campo > input {
     /* movimentação vertical, sentido p/ para cima, p/ q os 2 inputs fiquem simetricamente dentro das 2 divs*/
 }
 
-div.campo > input:focus-within { /* Alteração da cor de fundo ao digitar */
+div.campo > input:focus-within { /* within = "dentro de" - Alteração da cor de fundo ao digitar */
     background-color: white;
 }
 
@@ -119,8 +119,7 @@ form > a.botao {
     display: block;
     text-align: center;
     font-size: 1em;
-   /* width: calc(100% - 2px); */
-   width: 100%;
+    width: 100%;
     height: 40px;
     padding-top: 2px;
     margin-top: 5px;
